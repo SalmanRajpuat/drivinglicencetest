@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Driving License Quiz - Improved Version</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <h1>Pakistan Driving License Quiz</h1>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn" onclick="showSection('home')">
+                    <i class="fas fa-home"></i> Home
+                </button>
+                <button class="nav-btn" onclick="showSection('quiz')">
+                    <i class="fas fa-question-circle"></i> Take Quiz
+                </button>
+                <button class="nav-btn" onclick="showSection('results')">
+                    <i class="fas fa-chart-bar"></i> Results
+                </button>
+                <button class="nav-btn" onclick="showSection('study')">
+                    <i class="fas fa-book"></i> Study Guide
+                </button>
+            </nav>
+        </header>
+
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h2>Welcome to Pakistan Driving License Test</h2>
+                <p>Practice for your driving license exam with our comprehensive quiz system</p>
+                <div class="features">
+                    <div class="feature-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Smart Learning</h3>
+                        <p>Adaptive questions based on Pakistani traffic rules</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Friendly</h3>
+                        <p>Take the test on any device, anywhere</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Timed Practice</h3>
+                        <p>Real exam conditions with time limits</p>
+                    </div>
+                </div>
+                <button class="cta-button" onclick="showSection('quiz')">
+                    <i class="fas fa-play"></i> Start Quiz Now
+                </button>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="section">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="progress-text" id="progressText">Question 1 of 20</span>
+                    </div>
+                    <div class="timer" id="timer">15:00</div>
+                </div>
+
+                <div class="question-container" id="questionContainer">
+                    <div class="question" id="question">
+                        Click "Start Quiz" to begin
+                    </div>
+                    <div class="options" id="options">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    <button class="btn btn-primary" id="startBtn" onclick="startQuiz()">
+                        <i class="fas fa-play"></i> Start Quiz
+                    </button>
+                    <button class="btn btn-primary hidden" id="nextBtn" onclick="nextQuestion()">
+                        Next <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-success hidden" id="submitBtn" onclick="submitQuiz()">
+                        <i class="fas fa-check"></i> Submit Quiz
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="section">
+            <div class="results-container" id="resultsContainer">
+                <h2>Quiz Results</h2>
+                <p>Complete a quiz to see your results here.</p>
+            </div>
+        </section>
+
+        <!-- Study Guide Section -->
+        <section id="study" class="section">
+            <div class="study-container">
+                <h2>Study Guide - Pakistani Traffic Rules</h2>
+                
+                <!-- Official Resources Section -->
+                <div class="resources-section">
+                    <h3><i class="fas fa-external-link-alt"></i> Official Resources & Links</h3>
+                    <div class="resource-links">
+                        <a href="https://dla.nhmp.gov.pk/" target="_blank" rel="noopener" class="resource-link">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <strong>NHMP Driving License Authority</strong>
+                                <small>Official driving license portal</small>
+                            </div>
+                        </a>
+                        <a href="https://ctplahore.gop.pk/" target="_blank" rel="noopener" class="resource-link">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <strong>City Traffic Police Lahore</strong>
+                                <small>Traffic rules and regulations</small>
+                            </div>
+                        </a>
+                        <a href="https://dla.nhmp.gov.pk/" target="_blank" rel="noopener" class="resource-link">
+                            <i class="fas fa-question-circle"></i>
+                            <div>
+                                <strong>NHMP Driving License Portal</strong>
+                                <small>Official government licensing portal</small>
+                            </div>
+                        </a>
+                        <a href="./GUIDE-FOR-PRACTICAL-DRIVING-TEST.pdf" target="_blank" rel="noopener" class="resource-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <div>
+                                <strong>Official Practical Driving Test Guide</strong>
+                                <small>Complete P1 & P2 test guide (Downloaded locally)</small>
+                            </div>
+                        </a>
+                        <a href="https://www.nhmp.gov.pk/" target="_blank" rel="noopener" class="resource-link">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>National Highways & Motorway Police</strong>
+                                <small>Highway traffic rules and safety</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="study-topics">
+                    <div class="topic-card">
+                        <h3><i class="fas fa-road"></i> Road Signs</h3>
+                        <p>Learn about mandatory, warning, and informatory signs used in Pakistan</p>
+                        <ul>
+                            <li>Stop signs and their meaning</li>
+                            <li>Speed limit signs</li>
+                            <li>Warning signs for hazards</li>
+                            <li>Direction and information signs</li>
+                        </ul>
+                    </div>
+                    <div class="topic-card">
+                        <h3><i class="fas fa-traffic-light"></i> Traffic Rules</h3>
+                        <p>Essential traffic regulations and right-of-way rules</p>
+                        <ul>
+                            <li>Traffic light systems</li>
+                            <li>Lane discipline</li>
+                            <li>Overtaking rules</li>
+                            <li>Speed limits in different areas</li>
+                        </ul>
+                    </div>
+                    <div class="topic-card">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Safety Rules</h3>
+                        <p>Safety precautions and defensive driving techniques</p>
+                        <ul>
+                            <li>Seat belt requirements</li>
+                            <li>Safe following distance</li>
+                            <li>Weather driving conditions</li>
+                            <li>Emergency procedures</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
