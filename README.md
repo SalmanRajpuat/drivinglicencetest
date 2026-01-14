@@ -5,33 +5,33 @@ This is an enhanced web-based driving license quiz application specifically desi
 
 ## Features
 
-### 🚗 **Interactive Quiz System**
+### **Interactive Quiz System**
 - 20 comprehensive questions based on Pakistani traffic laws
 - Multiple choice questions with immediate feedback
 - Progress tracking with visual progress bar
 - 15-minute time limit with countdown timer
 - Keyboard navigation support (arrow keys, number keys)
 
-### 📱 **Responsive Design**
+### **Responsive Design**
 - Mobile-friendly interface that works on all devices
 - Modern, clean design with smooth animations
 - Accessible color scheme and typography
 - Touch-friendly buttons and interface elements
 
-### 📊 **Results & Analytics**
+### **Results & Analytics**
 - Detailed score breakdown with percentage
 - Pass/fail indication (70% required to pass)
 - Time taken tracking
 - Answer review with explanations
 - Grade classification (Excellent, Good, Poor)
 
-### 📚 **Study Guide**
+### **Study Guide**
 - Comprehensive study materials
 - Organized topics: Road Signs, Traffic Rules, Safety Rules
 - Visual learning aids with icons
 - Pakistani-specific traffic regulations
 
-### 🎯 **User Experience**
+### **User Experience**
 - Intuitive navigation between sections
 - Visual feedback for selected answers
 - Prevent accidental page refresh during quiz
@@ -136,13 +136,6 @@ a3 ict/
 - Proper separation of concerns (HTML/CSS/JS)
 - Accessibility considerations
 - Performance optimizations
-
-## Browser Compatibility
-- Chrome 60+
-- Firefox 55+
-- Safari 11+
-- Edge 79+
-- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## Future Enhancements
 - Question bank expansion
